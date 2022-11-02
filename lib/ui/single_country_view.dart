@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:graphql_tutorial/api/models/country_model.dart';
 import 'package:graphql_tutorial/cubit/cubit/country_cubit.dart';
@@ -31,7 +29,7 @@ class _SingleCountryViewState extends State<SingleCountryView> {
           onPressed: () {
             BlocProvider.of<CountryCubit>(context).getQueryCountries();
             Navigator.pushReplacement(
-                context, MaterialPageRoute(builder: (_) => HomePage()));
+                context, MaterialPageRoute(builder: (_) => const HomePage()));
           },
         ),
       ),

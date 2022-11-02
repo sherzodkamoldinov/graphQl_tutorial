@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:graphql_tutorial/api/api_service.dart';
 import 'package:graphql_tutorial/cubit/cubit/country_cubit.dart';
 import 'package:graphql_tutorial/ui/single_country_view.dart';
 
@@ -41,7 +40,7 @@ class HomePage extends StatelessWidget {
               child: Text(state.error),
             );
           } else {
-            return Text('Nothing');
+            return const Text('Nothing');
           }
         },
       ),
